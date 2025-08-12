@@ -22,39 +22,39 @@ const BookDesignPage = () => {
 
   const bookDesigns = {
     covers: [
-      { title: "The Silent Echo", genre: "Mystery Thriller", image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&h=300&fit=crop", beforeAfter: true },
-      { title: "Hearts Entwined", genre: "Romance", image: "https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=200&h=300&fit=crop", beforeAfter: false },
-      { title: "Digital Revolution", genre: "Business", image: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=200&h=300&fit=crop", beforeAfter: true },
-      { title: "Magical Adventures", genre: "Children's Fantasy", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=300&fit=crop", beforeAfter: false },
-      { title: "Cooking Mastery", genre: "Cookbook", image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=200&h=300&fit=crop", beforeAfter: true },
-      { title: "Poetry of Life", genre: "Poetry Collection", image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=200&h=300&fit=crop", beforeAfter: false }
+      { title: "The Silent Echo", genre: "Mystery Thriller", image: "/bookDesign/mockup (5).jpg", beforeAfter: true },
+      { title: "Hearts Entwined", genre: "Romance", image: "/bookDesign/mockup (6).jpg", beforeAfter: false },
+      { title: "Digital Revolution", genre: "Business", image: "/bookDesign/mockup (7).jpg", beforeAfter: true },
+      { title: "Magical Adventures", genre: "Children's Fantasy", image: "/bookDesign/mockup (8).jpg", beforeAfter: false },
+      { title: "Cooking Mastery", genre: "Cookbook", image: "/bookDesign/mockup (9).jpg", beforeAfter: true },
+      { title: "Poetry of Life", genre: "Poetry Collection", image: "/bookDesign/mockup (10).jpg", beforeAfter: false }
     ],
     interiors: [
-      { title: "Chapter Layout Design", description: "Beautiful chapter headers and typography", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop" },
-      { title: "Poetry Formatting", description: "Elegant spacing and font selection", image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=300&h=200&fit=crop" },
-      { title: "Cookbook Layout", description: "Recipe formatting with images", image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=200&fit=crop" }
+      { title: "Chapter Layout Design", description: "Beautiful chapter headers and typography", image: "/bookDesign/mockup7.jpg" },
+      { title: "Poetry Formatting", description: "Elegant spacing and font selection", image: "/bookDesign/mockup8 (2).jpg" },
+      { title: "Cookbook Layout", description: "Recipe formatting with images", image: "/bookDesign/mockupBundle (2).jpg" }
     ]
   };
 
   const designServices = [
-    { icon: <Palette className="w-12 h-12" />, title: "Book Cover Design", description: "Custom covers that capture your book's essence and attract readers at first glance", features: ["Genre-specific design", "Multiple concepts", "Print & digital formats", "Unlimited revisions"], price: "From $399", designExample: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&h=200&fit=crop" },
-    { icon: <Layout className="w-12 h-12" />, title: "Interior Book Design", description: "Professional typography and layout for both print and eBook formats", features: ["Chapter layouts", "Typography selection", "Page formatting", "eBook optimization"], price: "From $299", designExample: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=150&h=200&fit=crop" },
-    { icon: <Layers className="w-12 h-12" />, title: "Complete Design Package", description: "Full book design solution including cover, interior, and marketing materials", features: ["Cover + Interior", "Marketing graphics", "Author branding", "Print preparation"], price: "From $699", designExample: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=150&h=200&fit=crop" }
+    { icon: <Palette className="w-12 h-12" />, title: "Book Cover Design", description: "Custom covers that capture your book's essence and attract readers at first glance", features: ["Genre-specific design", "Multiple concepts", "Print & digital formats", "Unlimited revisions"], price: "From $399", designExample: "/bookDesign/mockup (5).jpg" },
+    { icon: <Layout className="w-12 h-12" />, title: "Interior Book Design", description: "Professional typography and layout for both print and eBook formats", features: ["Chapter layouts", "Typography selection", "Page formatting", "eBook optimization"], price: "From $299", designExample: "/bookDesign/mockup7.jpg" },
+    { icon: <Layers className="w-12 h-12" />, title: "Complete Design Package", description: "Full book design solution including cover, interior, and marketing materials", features: ["Cover + Interior", "Marketing graphics", "Author branding", "Print preparation"], price: "From $699", designExample: "/bookDesign/mockupBundle (2).jpg" }
   ];
 
   const designProcess = [
-    { step: "1", title: "Design Brief & Consultation", description: "We discuss your book's genre, target audience, and design preferences", icon: <Lightbulb className="w-8 h-8" />, designVisual: "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=100&h=100&fit=crop" },
-    { step: "2", title: "Concept Creation", description: "Our designers create multiple unique book cover and interior concepts", icon: <Brush className="w-8 h-8" />, designVisual: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=100&h=100&fit=crop" },
-    { step: "3", title: "Design Development", description: "Refine chosen concepts with detailed typography and layout work", icon: <Type className="w-8 h-8" />, designVisual: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=100&h=100&fit=crop" },
-    { step: "4", title: "Revision & Perfection", description: "Collaborate on revisions until your book design is perfect", icon: <Eye className="w-8 h-8" />, designVisual: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" },
-    { step: "5", title: "Final Delivery", description: "Receive print-ready files and digital formats for all platforms", icon: <Download className="w-8 h-8" />, designVisual: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=100&h=100&fit=crop" }
+    { step: "1", title: "Design Brief & Consultation", description: "We discuss your book's genre, target audience, and design preferences", icon: <Lightbulb className="w-8 h-8" />, designVisual: "/bookDesign/mockupIMG.jpg" },
+    { step: "2", title: "Concept Creation", description: "Our designers create multiple unique book cover and interior concepts", icon: <Brush className="w-8 h-8" />, designVisual: "/bookDesign/mockup_.jpg" },
+    { step: "3", title: "Design Development", description: "Refine chosen concepts with detailed typography and layout work", icon: <Type className="w-8 h-8" />, designVisual: "/bookDesign/mockup_ (2).jpg" },
+    { step: "4", title: "Revision & Perfection", description: "Collaborate on revisions until your book design is perfect", icon: <Eye className="w-8 h-8" />, designVisual: "/bookDesign/mockup_ (4).jpg" },
+    { step: "5", title: "Final Delivery", description: "Receive print-ready files and digital formats for all platforms", icon: <Download className="w-8 h-8" />, designVisual: "/bookDesign/mockup_flat.jpg" }
   ];
 
   const genreShowcase = [
-    { genre: "Fiction & Literature", books: [{ title: "Mystery Novel", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=120&h=160&fit=crop" }, { title: "Romance", img: "https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?w=120&h=160&fit=crop" }, { title: "Fantasy", img: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=120&h=160&fit=crop" }] },
-    { genre: "Non-Fiction & Business", books: [{ title: "Business Guide", img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=120&h=160&fit=crop" }, { title: "Self-Help", img: "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?w=120&h=160&fit=crop" }, { title: "Biography", img: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=120&h=160&fit=crop" }] },
-    { genre: "Children's & Educational", books: [{ title: "Picture Book", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=160&fit=crop" }, { title: "Educational", img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=120&h=160&fit=crop" }, { title: "Activity Book", img: "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?w=120&h=160&fit=crop" }] },
-    { genre: "Specialty & Art Books", books: [{ title: "Cookbook", img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=120&h=160&fit=crop" }, { title: "Poetry", img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=120&h=160&fit=crop" }, { title: "Art Book", img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=120&h=160&fit=crop" }] }
+    { genre: "Fiction & Literature", books: [{ title: "Mystery Novel", img: "/bookDesign/mockup (5).jpg" }, { title: "Romance", img: "/bookDesign/mockup (6).jpg" }, { title: "Fantasy", img: "/bookDesign/mockup (7).jpg" }] },
+    { genre: "Non-Fiction & Business", books: [{ title: "Business Guide", img: "/bookDesign/mockup (8).jpg" }, { title: "Self-Help", img: "/bookDesign/mockup (9).jpg" }, { title: "Biography", img: "/bookDesign/mockup (10).jpg" }] },
+    { genre: "Children's & Educational", books: [{ title: "Picture Book", img: "/bookDesign/mockupIMG.jpg" }, { title: "Educational", img: "/bookDesign/mockup_.jpg" }, { title: "Activity Book", img: "/bookDesign/mockup_ (2).jpg" }] },
+    { genre: "Specialty & Art Books", books: [{ title: "Cookbook", img: "/bookDesign/mockup_ (4).jpg" }, { title: "Poetry", img: "/bookDesign/mockup_flat.jpg" }, { title: "Art Book", img: "/bookDesign/mockup__ (2).jpg" }] }
   ];
   const navigate = useNavigate()
   return (
@@ -242,9 +242,9 @@ const BookDesignPage = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=200&h=300&fit=crop", title: "Professional Cover Design", description: "Clean typography, compelling imagery, genre-appropriate design", label: "After" },
-              { img: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=200&h=300&fit=crop", title: "Beautiful Interior Layout", description: "Perfect typography, spacing, and formatting for readability", label: "Interior" },
-              { img: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=200&h=300&fit=crop", title: "Complete Design Package", description: "Cover, interior, and marketing materials all designed cohesively", label: "Complete" }
+              { img: "/bookDesign/mockup_flat.jpg", title: "Professional Cover Design", description: "Clean typography, compelling imagery, genre-appropriate design", label: "After" },
+              { img: "/bookDesign/mockup (8).jpg", title: "Beautiful Interior Layout", description: "Perfect typography, spacing, and formatting for readability", label: "Interior" },
+              { img: "/bookDesign/mockup (7).jpg", title: "Complete Design Package", description: "Cover, interior, and marketing materials all designed cohesively", label: "Complete" }
             ].map((item, index) => (
               <div key={index} className="text-center" data-aos="fade-up">
                 <div className="relative mb-4">

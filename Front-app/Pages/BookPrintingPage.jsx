@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom'
@@ -26,7 +26,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 
 const BookPrintingPage = () => {
-  const [selectedPackage, setSelectedPackage] = useState('professional');
 
   useEffect(() => {
     AOS.init({
@@ -61,19 +60,19 @@ const BookPrintingPage = () => {
 
   const printGallery = [
     {
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop",
+      src: "/bookPrinting/book_cover_mockup_design_3d.jpg",
       alt: "Book printing process",
     },
     {
-      src: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&h=300&fit=crop",
+      src: "/bookPrinting/book_cover_mockup.jpg",
       alt: "Finished books",
     },
     {
-      src: "https://images.unsplash.com/photo-1589998059171-988d887df646?w=300&h=300&fit=crop",
+      src: "/bookPrinting/book_cover_mockup_done_3.png",
       alt: "Hardcover books",
     },
     {
-      src: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=300&h=300&fit=crop",
+      src: "/bookPrinting/convert kindle to Createspace KDP print paperback book cover.jpg",
       alt: "Colorful books",
     },
   ];
@@ -144,11 +143,11 @@ const BookPrintingPage = () => {
         <div className="relative h-[90vh] min-h-[500px]">
           <div className="absolute inset-0">
             <img
-              src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1920&h=800&fit=crop"
+              src="/bookPrinting/book_cover_mockup_done_3D.png"
               alt="Professional Book Printing Services"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35 backdrop-blur-[1px]"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">
             <div className="max-w-3xl" data-aos="fade-down">
