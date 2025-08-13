@@ -746,7 +746,7 @@
 //             </div>
 
 //             <a
-//               href="tel:+923085974310"
+//               href="tel:+923095204849"
 //               className="inline-flex items-center mt-4 text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors duration-300 group"
 //             >
 //               <svg
@@ -1625,7 +1625,7 @@
 
 //           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
 //              <a
-//             href="https://wa.me/+923085974310"
+//             href="https://wa.me/+923095204849"
 //             target="_blank"
 //           >
 //             <button
@@ -1660,7 +1660,7 @@
 //       <div className="fixed bottom-6 right-6 z-50 animate-bounce">
 //         <div className="group relative">
 //           <a
-//             href="https://wa.me/+923085974310"
+//             href="https://wa.me/+923095204849"
 //             target="_blank"
 //             rel="noopener noreferrer"
 //             className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
@@ -2381,7 +2381,7 @@ const HomePage = () => {
               </div>
 
               <a
-                href="tel:+923085974310"
+                href="tel:+923095204849"
                 className="inline-flex items-center mt-4 text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors duration-300 group"
               >
                 <svg
@@ -3132,7 +3132,7 @@ const HomePage = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-              <a href="https://wa.me/+923085974310" target="_blank">
+              <a href="https://wa.me/+923095204849" target="_blank">
                 <button
                   className="group bg-white text-amber-600 px-10 py-4 rounded-lg text-lg font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3"
                 >
@@ -3167,7 +3167,7 @@ const HomePage = () => {
         <div className="fixed bottom-6 right-6 z-50 animate-bounce">
           <div className="group relative">
             <a
-              href="https://wa.me/+923085974310"
+              href="https://wa.me/+923095204849"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
