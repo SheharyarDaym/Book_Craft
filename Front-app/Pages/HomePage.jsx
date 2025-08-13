@@ -953,7 +953,7 @@ const HomePage = () => {
                 style={{ width: `${bookCollection.length * 2 * 250}px` }}
               >
                 {[...bookCollection, ...bookCollection].map((book, index) => (
-                  <div key={index} className="flex-shrink-0 transform hover:scale-110 transition-transform duration-300">
+                  <div key={index} className="flex-shrink-0 transform ">
                     <div className="w-40 h-60 bg-white rounded-lg shadow-xl overflow-hidden border-2 border-white/30">
                       <img
                         src={book.image || "/placeholder.svg"}
