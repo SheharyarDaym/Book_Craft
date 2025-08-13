@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom'
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import {
   ArrowLeft,
@@ -353,6 +354,22 @@ const BookPrintingPage = () => {
                 </div>
               </div>
             </div>
+<div className="fixed bottom-6 left-6 z-50 animate-bounce">
+  <div className="group relative">
+    <a
+      href="mailto:shahrayr@gmail.com"
+      className="flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+    >
+      <FontAwesomeIcon icon={faEnvelope} />
+    </a>
+
+    {/* Tooltip */}
+    <div className="absolute bottom-16 left-0 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+      Send us an Email
+      <div className="absolute top-full left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
+    </div>
+  </div>
+</div>
 
 
 
