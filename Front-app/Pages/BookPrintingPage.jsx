@@ -5,6 +5,13 @@ import 'aos/dist/aos.css';
 import { useNavigate } from 'react-router-dom'
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+// Import images from bookPrinting folder
+import bookPrinting1 from "/bookPrinting/book_cover_mockup_design_3d.jpg";
+import bookPrinting2 from "/bookPrinting/book_cover_mockup.jpg";
+import bookPrinting3 from "/bookPrinting/book_cover_mockup_done_3.png";
+import bookPrinting4 from "/bookPrinting/convert kindle to Createspace KDP print paperback book cover.jpg";
+import bookPrinting5 from "/bookPrinting/book_cover_mockup_done_3D.png";
+
 import {
   ArrowLeft,
   BookOpen,
@@ -61,19 +68,19 @@ const BookPrintingPage = () => {
 
   const printGallery = [
     {
-      src: "/bookPrinting/book_cover_mockup_design_3d.jpg",
+      src: bookPrinting1,
       alt: "Book printing process",
     },
     {
-      src: "/bookPrinting/book_cover_mockup.jpg",
+      src: bookPrinting2,
       alt: "Finished books",
     },
     {
-      src: "/bookPrinting/book_cover_mockup_done_3.png",
+      src: bookPrinting3,
       alt: "Hardcover books",
     },
     {
-      src: "/bookPrinting/convert kindle to Createspace KDP print paperback book cover.jpg",
+      src: bookPrinting4,
       alt: "Colorful books",
     },
   ];
@@ -144,7 +151,7 @@ const BookPrintingPage = () => {
         <div className="relative h-[90vh] min-h-[500px]">
           <div className="absolute inset-0">
             <img
-              src="/bookPrinting/book_cover_mockup_done_3D.png"
+              src={bookPrinting5}
               alt="Professional Book Printing Services"
               className="w-full h-full object-cover"
             />

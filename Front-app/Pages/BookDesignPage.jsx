@@ -9,8 +9,25 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { useNavigate } from 'react-router-dom';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+// Import images from bookDesign folder
+import bookDesign1 from "/bookDesign/mockup (5).jpg";
+import bookDesign2 from "/bookDesign/mockup (6).jpg";
+import bookDesign3 from "/bookDesign/mockup (7).jpg";
+import bookDesign4 from "/bookDesign/mockup (8).jpg";
+import bookDesign5 from "/bookDesign/mockup (9).jpg";
+import bookDesign6 from "/bookDesign/mockup (10).jpg";
+import bookDesign7 from "/bookDesign/mockup7.jpg";
+import bookDesign8 from "/bookDesign/mockup8 (2).jpg";
+import bookDesign9 from "/bookDesign/mockupBundle (2).jpg";
+import bookDesign10 from "/bookDesign/mockupIMG.jpg";
+import bookDesign11 from "/bookDesign/mockup_.jpg";
+import bookDesign12 from "/bookDesign/mockup_ (2).jpg";
+import bookDesign13 from "/bookDesign/mockup_ (4).jpg";
+import bookDesign14 from "/bookDesign/mockup_flat.jpg";
+import bookDesign15 from "/bookDesign/mockup__ (2).jpg";
+
 const BookDesignPage = () => {
-  const [activeTab, setActiveTab] = useState('covers');
+  const [_activeTab, _setActiveTab] = useState('covers');
 
   useEffect(() => {
       window.scrollTo(0, 0);
@@ -23,39 +40,39 @@ const BookDesignPage = () => {
 
   const bookDesigns = {
     covers: [
-      { title: "The Silent Echo", genre: "Mystery Thriller", image: "/bookDesign/mockup (5).jpg", beforeAfter: true },
-      { title: "Hearts Entwined", genre: "Romance", image: "/bookDesign/mockup (6).jpg", beforeAfter: false },
-      { title: "Digital Revolution", genre: "Business", image: "/bookDesign/mockup (7).jpg", beforeAfter: true },
-      { title: "Magical Adventures", genre: "Children's Fantasy", image: "/bookDesign/mockup (8).jpg", beforeAfter: false },
-      { title: "Cooking Mastery", genre: "Cookbook", image: "/bookDesign/mockup (9).jpg", beforeAfter: true },
-      { title: "Poetry of Life", genre: "Poetry Collection", image: "/bookDesign/mockup (10).jpg", beforeAfter: false }
+      { title: "The Silent Echo", genre: "Mystery Thriller", image: bookDesign1, beforeAfter: true },
+      { title: "Hearts Entwined", genre: "Romance", image: bookDesign2, beforeAfter: false },
+      { title: "Digital Revolution", genre: "Business", image: bookDesign3, beforeAfter: true },
+      { title: "Magical Adventures", genre: "Children's Fantasy", image: bookDesign4, beforeAfter: false },
+      { title: "Cooking Mastery", genre: "Cookbook", image: bookDesign5, beforeAfter: true },
+      { title: "Poetry of Life", genre: "Poetry Collection", image: bookDesign6, beforeAfter: false }
     ],
     interiors: [
-      { title: "Chapter Layout Design", description: "Beautiful chapter headers and typography", image: "/bookDesign/mockup7.jpg" },
-      { title: "Poetry Formatting", description: "Elegant spacing and font selection", image: "/bookDesign/mockup8 (2).jpg" },
-      { title: "Cookbook Layout", description: "Recipe formatting with images", image: "/bookDesign/mockupBundle (2).jpg" }
+      { title: "Chapter Layout Design", description: "Beautiful chapter headers and typography", image: bookDesign7 },
+      { title: "Poetry Formatting", description: "Elegant spacing and font selection", image: bookDesign8 },
+      { title: "Cookbook Layout", description: "Recipe formatting with images", image: bookDesign9 }
     ]
   };
 
   const designServices = [
-    { icon: <Palette className="w-12 h-12" />, title: "Book Cover Design", description: "Custom covers that capture your book's essence and attract readers at first glance", features: ["Genre-specific design", "Multiple concepts", "Print & digital formats", "Unlimited revisions"], price: "From $399", designExample: "/bookDesign/mockup (5).jpg" },
-    { icon: <Layout className="w-12 h-12" />, title: "Interior Book Design", description: "Professional typography and layout for both print and eBook formats", features: ["Chapter layouts", "Typography selection", "Page formatting", "eBook optimization"], price: "From $299", designExample: "/bookDesign/mockup7.jpg" },
-    { icon: <Layers className="w-12 h-12" />, title: "Complete Design Package", description: "Full book design solution including cover, interior, and marketing materials", features: ["Cover + Interior", "Marketing graphics", "Author branding", "Print preparation"], price: "From $699", designExample: "/bookDesign/mockupBundle (2).jpg" }
+    { icon: <Palette className="w-12 h-12" />, title: "Book Cover Design", description: "Custom covers that capture your book's essence and attract readers at first glance", features: ["Genre-specific design", "Multiple concepts", "Print & digital formats", "Unlimited revisions"], price: "From $399", designExample: bookDesign1 },
+    { icon: <Layout className="w-12 h-12" />, title: "Interior Book Design", description: "Professional typography and layout for both print and eBook formats", features: ["Chapter layouts", "Typography selection", "Page formatting", "eBook optimization"], price: "From $299", designExample: bookDesign7 },
+    { icon: <Layers className="w-12 h-12" />, title: "Complete Design Package", description: "Full book design solution including cover, interior, and marketing materials", features: ["Cover + Interior", "Marketing graphics", "Author branding", "Print preparation"], price: "From $699", designExample: bookDesign9 }
   ];
 
   const designProcess = [
-    { step: "1", title: "Design Brief & Consultation", description: "We discuss your book's genre, target audience, and design preferences", icon: <Lightbulb className="w-8 h-8" />, designVisual: "/bookDesign/mockupIMG.jpg" },
-    { step: "2", title: "Concept Creation", description: "Our designers create multiple unique book cover and interior concepts", icon: <Brush className="w-8 h-8" />, designVisual: "/bookDesign/mockup_.jpg" },
-    { step: "3", title: "Design Development", description: "Refine chosen concepts with detailed typography and layout work", icon: <Type className="w-8 h-8" />, designVisual: "/bookDesign/mockup_ (2).jpg" },
-    { step: "4", title: "Revision & Perfection", description: "Collaborate on revisions until your book design is perfect", icon: <Eye className="w-8 h-8" />, designVisual: "/bookDesign/mockup_ (4).jpg" },
-    { step: "5", title: "Final Delivery", description: "Receive print-ready files and digital formats for all platforms", icon: <Download className="w-8 h-8" />, designVisual: "/bookDesign/mockup_flat.jpg" }
+    { step: "1", title: "Design Brief & Consultation", description: "We discuss your book's genre, target audience, and design preferences", icon: <Lightbulb className="w-8 h-8" />, designVisual: bookDesign10 },
+    { step: "2", title: "Concept Creation", description: "Our designers create multiple unique book cover and interior concepts", icon: <Brush className="w-8 h-8" />, designVisual: bookDesign11 },
+    { step: "3", title: "Design Development", description: "Refine chosen concepts with detailed typography and layout work", icon: <Type className="w-8 h-8" />, designVisual: bookDesign12 },
+    { step: "4", title: "Revision & Perfection", description: "Collaborate on revisions until your book design is perfect", icon: <Eye className="w-8 h-8" />, designVisual: bookDesign13 },
+    { step: "5", title: "Final Delivery", description: "Receive print-ready files and digital formats for all platforms", icon: <Download className="w-8 h-8" />, designVisual: bookDesign14 }
   ];
 
   const genreShowcase = [
-    { genre: "Fiction & Literature", books: [{ title: "Mystery Novel", img: "/bookDesign/mockup (5).jpg" }, { title: "Romance", img: "/bookDesign/mockup (6).jpg" }, { title: "Fantasy", img: "/bookDesign/mockup (7).jpg" }] },
-    { genre: "Non-Fiction & Business", books: [{ title: "Business Guide", img: "/bookDesign/mockup (8).jpg" }, { title: "Self-Help", img: "/bookDesign/mockup (9).jpg" }, { title: "Biography", img: "/bookDesign/mockup (10).jpg" }] },
-    { genre: "Children's & Educational", books: [{ title: "Picture Book", img: "/bookDesign/mockupIMG.jpg" }, { title: "Educational", img: "/bookDesign/mockup_.jpg" }, { title: "Activity Book", img: "/bookDesign/mockup_ (2).jpg" }] },
-    { genre: "Specialty & Art Books", books: [{ title: "Cookbook", img: "/bookDesign/mockup_ (4).jpg" }, { title: "Poetry", img: "/bookDesign/mockup_flat.jpg" }, { title: "Art Book", img: "/bookDesign/mockup__ (2).jpg" }] }
+    { genre: "Fiction & Literature", books: [{ title: "Mystery Novel", img: bookDesign1 }, { title: "Romance", img: bookDesign2 }, { title: "Fantasy", img: bookDesign3 }] },
+    { genre: "Non-Fiction & Business", books: [{ title: "Business Guide", img: bookDesign4 }, { title: "Self-Help", img: bookDesign5 }, { title: "Biography", img: bookDesign6 }] },
+    { genre: "Children's & Educational", books: [{ title: "Picture Book", img: bookDesign10 }, { title: "Educational", img: bookDesign11 }, { title: "Activity Book", img: bookDesign12 }] },
+    { genre: "Specialty & Art Books", books: [{ title: "Cookbook", img: bookDesign13 }, { title: "Poetry", img: bookDesign14 }, { title: "Art Book", img: bookDesign15 }] }
   ];
   const navigate = useNavigate()
   return (
@@ -243,9 +260,9 @@ const BookDesignPage = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { img: "/bookDesign/mockup_flat.jpg", title: "Professional Cover Design", description: "Clean typography, compelling imagery, genre-appropriate design", label: "After" },
-              { img: "/bookDesign/mockup (8).jpg", title: "Beautiful Interior Layout", description: "Perfect typography, spacing, and formatting for readability", label: "Interior" },
-              { img: "/bookDesign/mockup (7).jpg", title: "Complete Design Package", description: "Cover, interior, and marketing materials all designed cohesively", label: "Complete" }
+              { img: bookDesign14, title: "Professional Cover Design", description: "Clean typography, compelling imagery, genre-appropriate design", label: "After" },
+              { img: bookDesign4, title: "Beautiful Interior Layout", description: "Perfect typography, spacing, and formatting for readability", label: "Interior" },
+              { img: bookDesign3, title: "Complete Design Package", description: "Cover, interior, and marketing materials all designed cohesively", label: "Complete" }
             ].map((item, index) => (
               <div key={index} className="text-center" data-aos="fade-up">
                 <div className="relative mb-4">

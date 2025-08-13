@@ -9,7 +9,7 @@ const BookEditingPage = () => {
   useEffect(()=>{
     window.scrollTo(0, 0);
   })
-  const [selectedPackage, setSelectedPackage] = useState('professional')
+  const [_selectedPackage, _setSelectedPackage] = useState('professional')
 
   const features = [
     {
@@ -44,7 +44,7 @@ const BookEditingPage = () => {
     }
   ]
 
-  const packages = [
+  const _packages = [
     {
       id: 'basic',
       name: 'Basic Editing',
