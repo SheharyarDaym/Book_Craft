@@ -2398,7 +2398,7 @@ const HomePage = () => {
                   />
                 </svg>
                 <span className="border-b-2 border-transparent group-hover:border-orange-600 transition-colors duration-300">
-                  +92 308 5974310
+                  +92 309 5204849
                 </span>
               </a>
             </div>
