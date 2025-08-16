@@ -27,10 +27,10 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-import bookPrinting1 from "/bookPrinting/book_cover_mockup_design_3d.jpg";
-import bookPrinting2 from "/bookPrinting/book_cover_mockup.jpg";
-import bookPrinting3 from "/bookPrinting/book_cover_mockup_done_3.png";
-import bookPrinting4 from "/bookPrinting/convert kindle to Createspace KDP print paperback book cover.jpg";
+import bookPrinting1 from "/mockup (13).jpg";
+import bookPrinting2 from "../public/mockupSocialMedia (2).jpg";
+import bookPrinting3 from "/mockup_ (5).jpg";
+import bookPrinting4 from "/bookcover_mockup.jpg";
 
 import Satisfaction from "../public/Satisfaction.png"
 
@@ -50,6 +50,8 @@ import homeImage12 from "/Home/book mockup (2).jpg";
 import homeImage13 from "/Home/book_cover_mockup_desig.jpg";
 import homeImage14 from "/Home/book_cover_mockup3.jpg";
 import homeImage15 from "/Home/mockup (8).png";
+
+
 
 // Import images from Home_2 folder
 import home2Image1 from "/Home_2/mockup (2).png";
@@ -72,22 +74,22 @@ import home2Image15 from "/Home_2/mockupKit (2).png";
 
 
 const printGallery = [
-    {
-      src: bookPrinting1,
-      alt: "Book printing process",
-    },
-    {
-      src: bookPrinting2,
-      alt: "Finished books",
-    },
-    {
-      src: bookPrinting3,
-      alt: "Hardcover books",
-    },
-    {
-      src: bookPrinting4,
-      alt: "Colorful books",
-    },
+  {
+    src: bookPrinting3,
+    alt: "Book printing process",
+  },
+  {
+    src: bookPrinting2,
+    alt: "Finished books",
+  },
+  {
+    src: bookPrinting1,
+    alt: "Hardcover books",
+  },
+  {
+    src: bookPrinting4,
+    alt: "Colorful books",
+  },
 ];
 
 
@@ -164,7 +166,7 @@ const _services = [
 ];
 
 const circularServices = [
-  
+
   {
     id: "ebook-publishing",
     icon: <Tablet className="w-12 h-12" />,
@@ -578,7 +580,7 @@ const HomePage = () => {
     };
   }, []);
 
-  
+
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % bookCollection.length);
@@ -602,7 +604,7 @@ const HomePage = () => {
 
   const handleServiceClick = (path) => {
     // window.open(path, "_blank");
-      window.location.href = path;
+    window.location.href = path;
   };
 
   // Memoized to prevent re-renders
@@ -682,15 +684,14 @@ const HomePage = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-25 via-orange-25 to-yellow-25 relative overflow-x-hidden">
         <FloatingBooks />
 
-        
+
 
         {/* Hero Section */}
         <section id="home" className="pt-24 pb-20 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <div
-              className={`text-center mb-16 transform transition-all duration-1000 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-              }`}
+              className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                }`}
             >
               <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
                 Book publishing
@@ -726,26 +727,26 @@ const HomePage = () => {
 
         {/* Get In Touch Section */}
         <section
-  ref={getInTouchSectionRef}
-  className="h-[700px] flex items-center justify-center py-16 px-4"
-  style={{
-    background: "linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 50%, #f0e6db 100%)",
-  }}
->
-  <div className="max-w-4xl mx-auto text-center">
-    {/* Header */}
-    <div className="mb-16">
-      <h2 className="text-5xl md:text-6xl font-bold text-gray-800 mb-8 tracking-tight">Get in touch</h2>
-      <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-  At <span className="font-semibold text-orange-600">BookCraft Studio</span>, we guide you through every stage of the publishing journey. 
-  Our dedicated team ensures that every detail of your book is handled with care and expertise, giving you complete peace of mind. 
-  When your manuscript is ready, our experienced Publishing Specialists are here to provide personalized support and guidance.
-</p>
+          ref={getInTouchSectionRef}
+          className="h-[700px] flex items-center justify-center py-16 px-4"
+          style={{
+            background: "linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 50%, #f0e6db 100%)",
+          }}
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Header */}
+            <div className="mb-16">
+              <h2 className="text-5xl md:text-6xl font-bold text-gray-800 mb-8 tracking-tight">Get in touch</h2>
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                At <span className="font-semibold text-orange-600">BookCraft Studio</span>, we guide you through every stage of the publishing journey.
+                Our dedicated team ensures that every detail of your book is handled with care and expertise, giving you complete peace of mind.
+                When your manuscript is ready, our experienced Publishing Specialists are here to provide personalized support and guidance.
+              </p>
 
-    </div>
+            </div>
 
-    {/* Image Gallery */}
-    <section className=" px-4 mb-10">
+            {/* Image Gallery */}
+            <section className=" px-4 mb-10">
               <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {getInTouch.map((image, index) => (
@@ -762,53 +763,53 @@ const HomePage = () => {
               </div>
             </section>
 
-    {/* CTA Section */}
-    <div>
-      {/* Or Call Section */}
-      <div className="flex items-center justify-center gap-4">
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
-        <span className="text-gray-600 font-medium">Call</span>
-        <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
-      </div>
+            {/* CTA Section */}
+            <div>
+              {/* Or Call Section */}
+              <div className="flex items-center justify-center gap-4">
+                <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
+                <span className="text-gray-600 font-medium">Call</span>
+                <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
+              </div>
 
-      <a
-        href="tel:+923095204849"
-        className="inline-flex items-center mt-4 text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors duration-300 group"
-      >
-        <svg
-          className="w-7 h-7 mr-3 transform group-hover:rotate-12 transition-transform duration-300"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-          />
-        </svg>
-        <span className="border-b-2 ml-[-10px] border-transparent group-hover:border-orange-600 transition-colors duration-300">
-          +92 309 5204849
-        </span>
-      </a>
-    </div>
+              <a
+                href="tel:+923095204849"
+                className="inline-flex items-center mt-4 text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors duration-300 group"
+              >
+                <svg
+                  className="w-7 h-7 mr-3 transform group-hover:rotate-12 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <span className="border-b-2 ml-[-10px] border-transparent group-hover:border-orange-600 transition-colors duration-300">
+                  +92 309 5204849
+                </span>
+              </a>
+            </div>
 
-    {/* Floating elements for visual interest */}
-    <div
-      className="absolute top-20 left-10 w-20 h-20 bg-orange-200 rounded-full opacity-20 animate-bounce"
-      style={{ animationDelay: "0s", animationDuration: "3s" }}
-    ></div>
-    <div
-      className="absolute bottom-20 right-10 w-16 h-16 bg-orange-300 rounded-full opacity-20 animate-bounce"
-      style={{ animationDelay: "1s", animationDuration: "4s" }}
-    ></div>
-    <div
-      className="absolute top-1/2 left-5 w-12 h-12 bg-orange-400 rounded-full opacity-15 animate-bounce"
-      style={{ animationDelay: "2s", animationDuration: "5s" }}
-    ></div>
-  </div>
-</section>
+            {/* Floating elements for visual interest */}
+            <div
+              className="absolute top-20 left-10 w-20 h-20 bg-orange-200 rounded-full opacity-20 animate-bounce"
+              style={{ animationDelay: "0s", animationDuration: "3s" }}
+            ></div>
+            <div
+              className="absolute bottom-20 right-10 w-16 h-16 bg-orange-300 rounded-full opacity-20 animate-bounce"
+              style={{ animationDelay: "1s", animationDuration: "4s" }}
+            ></div>
+            <div
+              className="absolute top-1/2 left-5 w-12 h-12 bg-orange-400 rounded-full opacity-15 animate-bounce"
+              style={{ animationDelay: "2s", animationDuration: "5s" }}
+            ></div>
+          </div>
+        </section>
 
         {/* Circular Services Section */}
         <section id="services" className="py-20 px-4 bg-white">
@@ -845,94 +846,94 @@ const HomePage = () => {
         </section>
 
         {/* CreativeHub at a glance */}
-         <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 px-8" ref={ref}>
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
-          CreativeHub at a glance:
-        </h2>
+        <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-16 px-8" ref={ref}>
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+              CreativeHub at a glance:
+            </h2>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-          
-          {/* Stat 1 */}
-          <div className="relative group">
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border-2 border-transparent hover:border-purple-200">
-              <div className="w-28 h-28 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl font-bold text-white">
-                  {inView && <CountUp end={2000} duration={2} suffix="+" />}
-                </span>
+            {/* Stats Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+
+              {/* Stat 1 */}
+              <div className="relative group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border-2 border-transparent hover:border-purple-200">
+                  <div className="w-28 h-28 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl font-bold text-white">
+                      {inView && <CountUp end={2000} duration={2} suffix="+" />}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-600 mb-2">Creative Projects</h3>
+                  <p className="text-gray-600 text-sm">Successfully launched</p>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-purple-600 mb-2">Creative Projects</h3>
-              <p className="text-gray-600 text-sm">Successfully launched</p>
+
+              {/* Stat 2 */}
+              <div className="relative group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border-2 border-transparent hover:border-emerald-200">
+                  <div className="w-28 h-28 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl font-bold text-white">
+                      {inView && <CountUp end={4.9} duration={2} decimals={1} suffix="★" />}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-emerald-600 mb-2">User Rating</h3>
+                  <p className="text-gray-600 text-sm">From 2800+ reviews</p>
+                </div>
+              </div>
+
+              {/* Stat 3 */}
+              <div className="relative group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border-2 border-transparent hover:border-orange-200">
+                  <div className="w-28 h-28 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl font-bold text-white">
+                      {inView && <CountUp end={95} duration={2} suffix="+" />}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-orange-600 mb-2">Countries</h3>
+                  <p className="text-gray-600 text-sm">Worldwide reach</p>
+                </div>
+              </div>
+
             </div>
           </div>
-
-          {/* Stat 2 */}
-          <div className="relative group">
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border-2 border-transparent hover:border-emerald-200">
-              <div className="w-28 h-28 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl font-bold text-white">
-                  {inView && <CountUp end={4.9} duration={2} decimals={1} suffix="★" />}
-                </span>
-              </div>
-              <h3 className="text-lg font-semibold text-emerald-600 mb-2">User Rating</h3>
-              <p className="text-gray-600 text-sm">From 2800+ reviews</p>
-            </div>
-          </div>
-
-          {/* Stat 3 */}
-          <div className="relative group">
-            <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center border-2 border-transparent hover:border-orange-200">
-              <div className="w-28 h-28 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <span className="text-3xl font-bold text-white">
-                  {inView && <CountUp end={95} duration={2} suffix="+" />}
-                </span>
-              </div>
-              <h3 className="text-lg font-semibold text-orange-600 mb-2">Countries</h3>
-              <p className="text-gray-600 text-sm">Worldwide reach</p>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </div>
 
         {/* Infinite Book Gallery - Optimized with CSS */}
         <section className="py-12 bg-gradient-to-r from-amber-600 to-orange-600 relative overflow-hidden">
-  <div className="absolute inset-0 bg-black/10"></div>
-  <div className="relative z-10">
-    <div className="text-center mb-8">
-      <h2 className="text-3xl font-bold text-white mb-2">Infinite Book Gallery</h2>
-      <p className="text-amber-100">Endless showcase of professional book designs</p>
-    </div>
+          <div className="absolute inset-0 bg-black/10"></div>
+          <div className="relative z-10">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-2">Infinite Book Gallery</h2>
+              <p className="text-amber-100">Endless showcase of professional book designs</p>
+            </div>
 
-    {/* Centered Slideshow */}
-    <div className="flex justify-center">
-      <div className="relative overflow-hidden w-[1000px] md:w-[1200px] lg:w-[1440px]">
-        <div
-          className="flex space-x-6 animate-infinite-scroll"
-          style={{ width: `${bookCollection.length * 2 * 250}px` }}
-        >
-          {[...bookCollection, ...bookCollection].map((book, index) => (
-            <div key={index} className="flex-shrink-0 transform">
-              <div className="w-40 h-60 bg-white rounded-lg shadow-xl overflow-hidden border-2 border-white/30">
-                <img
-                  src={book.image || "/placeholder.svg"}
-                  alt={book.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="text-center mt-2">
-                <p className="text-white text-sm font-medium truncate w-40">{book.title}</p>
+            {/* Centered Slideshow */}
+            <div className="flex justify-center">
+              <div className="relative overflow-hidden w-[1000px] md:w-[1200px] lg:w-[1440px]">
+                <div
+                  className="flex space-x-6 animate-infinite-scroll"
+                  style={{ width: `${bookCollection.length * 2 * 250}px` }}
+                >
+                  {[...bookCollection, ...bookCollection].map((book, index) => (
+                    <div key={index} className="flex-shrink-0 transform">
+                      <div className="w-40 h-60 bg-white rounded-lg shadow-xl overflow-hidden border-2 border-white/30">
+                        <img
+                          src={book.image || "/placeholder.svg"}
+                          alt={book.title}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="text-center mt-2">
+                        <p className="text-white text-sm font-medium truncate w-40">{book.title}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+          </div>
+        </section>
 
 
         {/* Distribution Partners Section */}
@@ -953,97 +954,97 @@ const HomePage = () => {
 
             {/* Partner Logos */}
             <div className="flex flex-wrap justify-center items-center gap-12 mb-12">
-  {/* Barnes & Noble */}
-  <a
-    href="https://www.barnesandnoble.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group transition-all duration-300 hover:scale-110"
-  >
-    <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
-      BARNES & NOBLE
-    </div>
-    <div className="text-sm text-slate-500 text-center mt-1">BOOKSELLERS</div>
-  </a>
+              {/* Barnes & Noble */}
+              <a
+                href="https://www.barnesandnoble.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-300 hover:scale-110"
+              >
+                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
+                  BARNES & NOBLE
+                </div>
+                <div className="text-sm text-slate-500 text-center mt-1">BOOKSELLERS</div>
+              </a>
 
-  {/* Amazon Books */}
-  <a
-    href="https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group transition-all duration-300 hover:scale-110"
-  >
-    <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
-      Amazon
-    </div>
-    <div className="w-16 h-0.5 bg-amber-500 mx-auto mt-1"></div>
-  </a>
+              {/* Amazon Books */}
+              <a
+                href="https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-300 hover:scale-110"
+              >
+                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
+                  Amazon
+                </div>
+                <div className="w-16 h-0.5 bg-amber-500 mx-auto mt-1"></div>
+              </a>
 
-  {/* Walmart Books */}
-  <a
-    href="https://www.walmart.com/cp/books/3920"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group transition-all duration-300 hover:scale-110"
-  >
-    <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
-      Walmart
-      <div className="ml-2 text-amber-500">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-        </svg>
-      </div>
-    </div>
-  </a>
+              {/* Walmart Books */}
+              <a
+                href="https://www.walmart.com/cp/books/3920"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-300 hover:scale-110"
+              >
+                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
+                  Walmart
+                  <div className="ml-2 text-amber-500">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
 
-  {/* Target Books */}
-  <a
-    href="https://www.target.com/c/books/-/N-5xsxr"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group transition-all duration-300 hover:scale-110"
-  >
-    <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
-      Target
-      <div className="ml-2 w-6 h-6 rounded-full border-2 border-red-500 flex items-center justify-center">
-        <div className="w-2 h-2 rounded-full bg-red-500"></div>
-      </div>
-    </div>
-  </a>
+              {/* Target Books */}
+              <a
+                href="https://www.target.com/c/books/-/N-5xsxr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-300 hover:scale-110"
+              >
+                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
+                  Target
+                  <div className="ml-2 w-6 h-6 rounded-full border-2 border-red-500 flex items-center justify-center">
+                    <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                  </div>
+                </div>
+              </a>
 
-  {/* eBay Books */}
-  <a
-    href="https://www.ebay.com/b/Books/267/bn_1854946"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group transition-all duration-300 hover:scale-110"
-  >
-    <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
-      eBay
-    </div>
-    <div className="flex gap-1 justify-center mt-1">
-      <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-      <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-    </div>
-  </a>
+              {/* eBay Books */}
+              <a
+                href="https://www.ebay.com/b/Books/267/bn_1854946"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-300 hover:scale-110"
+              >
+                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
+                  eBay
+                </div>
+                <div className="flex gap-1 justify-center mt-1">
+                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                </div>
+              </a>
 
-  {/* Etsy Books */}
-  <a
-    href="https://www.etsy.com/c/books-movies-and-music/books"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group transition-all duration-300 hover:scale-110"
-  >
-    <div className="text-3xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
-      <div className="w-8 h-8 bg-purple-600 rounded-full mr-2 flex items-center justify-center text-white text-sm font-bold">
-        E
-      </div>
-      Etsy
-    </div>
-  </a>
-</div>
+              {/* Etsy Books */}
+              <a
+                href="https://www.etsy.com/c/books-movies-and-music/books"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group transition-all duration-300 hover:scale-110"
+              >
+                <div className="text-3xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
+                  <div className="w-8 h-8 bg-purple-600 rounded-full mr-2 flex items-center justify-center text-white text-sm font-bold">
+                    E
+                  </div>
+                  Etsy
+                </div>
+              </a>
+            </div>
 
           </div>
         </section>
@@ -1117,64 +1118,64 @@ const HomePage = () => {
           </div>
         </section> */}
         <section
-  id="portfolio"
-  className="pt-24 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
->
-  <div className="max-w-7xl mx-auto">
-    <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl shadow-2xl overflow-hidden border border-orange-500/20">
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 to-orange-900/20"></div>
-      <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center px-10 py-14">
-        
-        {/* Left Side - Intro & Services */}
-        <div>
-          <h3 className="text-3xl font-bold text-white mb-4">About Me</h3>
-          <p className="text-gray-300 mb-6 leading-relaxed">
-            Hi, I’m <span className="text-orange-400 font-semibold">Abdul Rehman</span>, a professional book designer & publishing expert.  
-            With years of experience helping authors bring their stories to life, I specialize in creating beautiful, market-ready books.
-          </p>
+          id="portfolio"
+          className="pt-24 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl shadow-2xl overflow-hidden border border-orange-500/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 to-orange-900/20"></div>
+              <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center px-10 py-14">
 
-          <h4 className="text-xl font-semibold text-orange-300 mb-4">Services I Offer</h4>
-          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-300">
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Paperback Formatting
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Hardcover Formatting
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Ebook Formatting
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Book Cover Design
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Book Publishing
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Book Writing
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-orange-400">✔</span> Lead Magnet PDF Design
-            </li>
-          </ul>
-        </div>
+                {/* Left Side - Intro & Services */}
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-4">About Me</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    Hi, I’m <span className="text-orange-400 font-semibold">Abdul Rehman</span>, a professional book designer & publishing expert.
+                    With years of experience helping authors bring their stories to life, I specialize in creating beautiful, market-ready books.
+                  </p>
 
-        {/* Right Side - Owner Image */}
-        <div className="flex justify-center">
-          <div className="relative w-72 h-72 rounded-2xl overflow-hidden shadow-lg border-4 border-orange-500/30">
-            <img
-              src="/owner.jpg" // place your owner’s image inside public folder
-              alt="Owner"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <h4 className="text-xl font-semibold text-orange-300 mb-4">Services I Offer</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-300">
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Paperback Formatting
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Hardcover Formatting
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Ebook Formatting
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Book Cover Design
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Book Publishing
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Book Writing
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-orange-400">✔</span> Lead Magnet PDF Design
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Right Side - Owner Image */}
+                <div className="flex justify-center">
+                  <div className="relative w-72 h-72 rounded-2xl overflow-hidden shadow-lg border-4 border-orange-500/30">
+                    <img
+                      src="/owner.jpg" // place your owner’s image inside public folder
+                      alt="Owner"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
           </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
 
 
@@ -1183,24 +1184,24 @@ const HomePage = () => {
             <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-12">
               {/* Guarantee Badge */}
               <div className="relative">
-  <div className="w-48 h-48 flex items-center justify-center relative transform rotate-12 hover:rotate-0 transition-transform duration-500">
-    <img 
-      src={Satisfaction} 
-      alt="Satisfaction Guarantee" 
-      className="w-full h-full object-contain rounded-full" 
-    />
-    {/* Decorative stars */}
-    <div className="absolute top-4 left-4">
-      <Star className="w-4 h-4 text-amber-200 fill-current" />
-    </div>
-    <div className="absolute bottom-4 right-4">
-      <Star className="w-4 h-4 text-amber-200 fill-current" />
-    </div>
-    <div className="absolute top-8 right-8">
-      <Star className="w-3 h-3 text-amber-200 fill-current" />
-    </div>
-  </div>
-</div>
+                <div className="w-48 h-48 flex items-center justify-center relative transform rotate-12 hover:rotate-0 transition-transform duration-500">
+                  <img
+                    src={Satisfaction}
+                    alt="Satisfaction Guarantee"
+                    className="w-full h-full object-contain rounded-full"
+                  />
+                  {/* Decorative stars */}
+                  <div className="absolute top-4 left-4">
+                    <Star className="w-4 h-4 text-amber-200 fill-current" />
+                  </div>
+                  <div className="absolute bottom-4 right-4">
+                    <Star className="w-4 h-4 text-amber-200 fill-current" />
+                  </div>
+                  <div className="absolute top-8 right-8">
+                    <Star className="w-3 h-3 text-amber-200 fill-current" />
+                  </div>
+                </div>
+              </div>
 
 
               {/* Guarantee Text */}
@@ -1212,7 +1213,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </section>                
+        </section>
 
         {/* Trustpilot Reviews Section */}
         <section className="py-20 px-4 bg-slate-50 mb-[-120px]">
@@ -1244,7 +1245,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        
+
 
         {/* Client Reviews Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-50 to-white">
@@ -1313,11 +1314,10 @@ const HomePage = () => {
                     <button
                       key={index}
                       onClick={() => setCurrentReview(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === currentReview
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentReview
                           ? "bg-amber-600 shadow-lg shadow-amber-600/50"
                           : "bg-slate-300 hover:bg-slate-400"
-                      }`}
+                        }`}
                     />
                   ))}
                 </div>
@@ -1375,49 +1375,49 @@ const HomePage = () => {
         </section>
 
 
-       
+
 
         {/* Floating WhatsApp Button */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col space-y-4 items-end">
-  {/* Email Button */}
-  <div className="group relative">
-    <a
-      href="mailto:shahrayr@gmail.com"
-      className="flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
-    >
-      <FontAwesomeIcon icon={faEnvelope} />
-    </a>
+          {/* Email Button */}
+          <div className="group relative">
+            <a
+              href="mailto:shahrayr@gmail.com"
+              className="flex items-center justify-center w-14 h-14 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faEnvelope} />
+            </a>
 
-    {/* Tooltip */}
-    <div className="absolute bottom-16 right-0 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
-      Send us an Email
-      <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
-    </div>
-  </div>
+            {/* Tooltip */}
+            <div className="absolute bottom-16 right-0 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+              Send us an Email
+              <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
+            </div>
+          </div>
 
-  {/* WhatsApp Button */}
-  <div className="group relative">
-    <a
-      href="https://wa.me/+923095204849"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
-    >
-      <FontAwesomeIcon icon={faWhatsapp} />
-    </a>
+          {/* WhatsApp Button */}
+          <div className="group relative">
+            <a
+              href="https://wa.me/+923095204849"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </a>
 
-    {/* Tooltip */}
-    <div className="absolute bottom-16 right-0 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
-      Chat with us on WhatsApp
-      <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
-    </div>
-  </div>
-</div>
-
-
+            {/* Tooltip */}
+            <div className="absolute bottom-16 right-0 bg-slate-900 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 pointer-events-none">
+              Chat with us on WhatsApp
+              <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
+            </div>
+          </div>
+        </div>
 
 
-        
+
+
+
       </div>
     </>
   );
