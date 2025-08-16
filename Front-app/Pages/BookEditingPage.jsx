@@ -172,32 +172,7 @@ const BookEditingPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
-      {/* Navigation */}
-       <nav className="fixed top-0 w-full bg-cream-white/95 backdrop-blur-xl z-50 border-b border-amber-200/50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <button
-                onClick={() => navigate('/')}
-                className="p-2 rounded-lg hover:bg-slate-100 transition-colors duration-300"
-              >
-                <ArrowLeft className="w-6 h-6 text-slate-600" />
-              </button>
-
-              <div className="relative">
-                <BookOpen className="w-10 h-10 text-amber-600" />
-                <Sparkles className="w-4 h-4 text-amber-500 absolute -top-1 -right-1" />
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
-                BookCraft Studio
-              </span>
-            </div>
-
-            
-          </div>
-        </div>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 relative overflow-hidden" data-aos="fade-up">
