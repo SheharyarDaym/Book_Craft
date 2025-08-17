@@ -190,11 +190,11 @@ const circularServices = [
 const HomePage = () => {
   const _navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [_currentSlide, setCurrentSlide] = useState(0);
   const [currentReview, setCurrentReview] = useState(0);
   const [openFAQ, setOpenFAQ] = useState(null);
 
-  const [isGetInTouchVisible, setIsGetInTouchVisible] = useState(false);
+  const [_isGetInTouchVisible, setIsGetInTouchVisible] = useState(false);
   const getInTouchSectionRef = useRef(null);
 
   const { ref, inView } = useInView({
@@ -333,7 +333,7 @@ const HomePage = () => {
     },
   ];
 
-  const bookCollection2 = [
+  const _bookCollection2 = [
     {
       id: 1,
       title: "Be The Man",
@@ -582,11 +582,11 @@ const HomePage = () => {
 
 
 
-  const nextSlide = () => {
+  const _nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % bookCollection.length);
   };
 
-  const prevSlide = () => {
+  const _prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + bookCollection.length) % bookCollection.length);
   };
 

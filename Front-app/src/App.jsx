@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from '../Pages/HomePage'
 import BookPrintingPage from '../Pages/BookPrintingPage'
 import EBookPublishingPage from '../Pages/EBookPublishingPage'
+import Paperback_Formatting from '../Pages/Paperback_Formatting'
 
 import BookEditingPage from '../Pages/BookEditingPage'
 import BookDesignPage from '../Pages/BookDesignPage'
@@ -20,6 +21,7 @@ function App() {
 
         <Route path="/book-editing" element={<BookEditingPage />} />
         <Route path="/book-design" element={<BookDesignPage />} />
+        <Route path="/Paperback-formating" element={<Paperback_Formatting/>}/>
 
       </Routes>
       <Footer/>
