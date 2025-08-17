@@ -20,6 +20,7 @@ import {
   DollarSign,
   Printer,
   Tablet,
+  FileText
 } from "lucide-react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
@@ -166,7 +167,6 @@ const _services = [
 ];
 
 const circularServices = [
-
   {
     id: "ebook-publishing",
     icon: <Tablet className="w-12 h-12" />,
@@ -185,7 +185,26 @@ const circularServices = [
     title: "Book Design",
     path: "/book-design",
   },
+  {
+    id: "paperback-formatting",
+    icon: <FileText className="w-12 h-12" />, // You can import this icon from your icon library
+    title: "Paperback Formatting",
+    path: "/paperback-formating",
+  },
+  {
+    id: "To be Added",
+    icon: <FileText className="w-12 h-12" />, // You can import this icon from your icon library
+    title: "To be Added",
+    path: "/paperback-formating",
+  },
+  {
+    id: "To be Added",
+    icon: <FileText className="w-12 h-12" />, // You can import this icon from your icon library
+    title: "To be Added",
+    path: "/paperback-formating",
+  },
 ];
+
 
 const HomePage = () => {
   const _navigate = useNavigate();
@@ -689,19 +708,18 @@ const HomePage = () => {
         {/* Hero Section */}
         <section id="home" className="pt-24 pb-20 px-4 relative overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <div
-              className={`text-center mb-16 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                }`}
-            >
-              <h1 className="text-5xl lg:text-7xl font-bold text-slate-900 mb-6 leading-tight">
-                Book publishing
-                <span className="block text-4xl lg:text-5xl text-slate-600 font-normal mt-2">made beautiful</span>
+            <div className="max-w-5xl mx-auto text-center mb-16 transition-all duration-1000 transform 
+              ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}">
+              
+              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
+                Book publishing <span className="font-light italic text-slate-500">made simple</span>
               </h1>
 
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-4xl mx-auto">
-                From captivating cover designs to flawless professional formatting, we refine your manuscript into a masterpiece that commands attention in bookstores and online marketplaces.
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+                We design, format, and perfect your book—ready to shine in print and online.
               </p>
             </div>
+
 
             {/* Optimized Slider with CSS animation */}
             <section className="py-[-30px] px-4 bg-white">
@@ -728,7 +746,7 @@ const HomePage = () => {
         {/* Get In Touch Section */}
         <section
           ref={getInTouchSectionRef}
-          className="h-[700px] flex items-center justify-center py-16 px-4"
+          className="h-[750px] flex items-center justify-center py-16 px-4"
           style={{
             background: "linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 50%, #f0e6db 100%)",
           }}
@@ -764,35 +782,56 @@ const HomePage = () => {
             </section>
 
             {/* CTA Section */}
-            <div>
-              {/* Or Call Section */}
+            <div className="mt-10">
               <div className="flex items-center justify-center gap-4">
                 <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
-                <span className="text-gray-600 font-medium">Call</span>
+                <span className="text-gray-600 font-medium">Get in Touch</span>
                 <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
               </div>
 
-              <a
-                href="tel:+923095204849"
-                className="inline-flex items-center mt-4 text-2xl font-bold text-orange-600 hover:text-orange-700 transition-colors duration-300 group"
-              >
-                <svg
-                  className="w-7 h-7 mr-3 transform group-hover:rotate-12 transition-transform duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              {/* Buttons Row */}
+              <div className="flex items-center justify-center gap-6 mt-6">
+                {/* Call Button */}
+                <a
+                  href="tel:+923095204849"
+                  className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-orange-600 rounded-full shadow-md hover:bg-orange-700 transition-colors duration-300"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
-                </svg>
-                <span className="border-b-2 ml-[-10px] border-transparent group-hover:border-orange-600 transition-colors duration-300">
-                  +92 309 5204849
-                </span>
-              </a>
+                  <svg
+                    className="w-6 h-6 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
+                  </svg>
+                  Call Us
+                </a>
+
+                {/* WhatsApp Button */}
+                <a
+                  href="https://wa.me/923095204849"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-green-600 rounded-full shadow-md hover:bg-green-700 transition-colors duration-300"
+                >
+                  <svg
+                    className="w-6 h-6 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 3.5A10.5 10.5 0 0012 1a10.5 10.5 0 00-9.33 15.5L2 23l6.67-1.67A10.5 10.5 0 1012 1zM12 20.5a8.5 8.5 0 01-4.42-1.21l-.31-.18-3.95 1L4.3 16.6l-.2-.32A8.5 8.5 0 1112 20.5zm4.79-6.63c-.26-.13-1.54-.76-1.78-.84-.24-.09-.42-.13-.59.13-.18.26-.67.84-.82 1.01-.15.18-.3.2-.56.07-.26-.13-1.11-.41-2.11-1.31-.78-.69-1.31-1.54-1.46-1.8-.15-.26-.02-.4.11-.53.11-.11.26-.3.38-.45.13-.15.17-.26.26-.44.09-.18.04-.33-.02-.46-.07-.13-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.46.07-.7.33s-.92.9-.92 2.2.95 2.54 1.08 2.71c.13.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.23.22-.6.22-1.11.15-1.23-.07-.11-.24-.18-.5-.31z"/>
+                  </svg>
+                  WhatsApp
+                </a>
+              </div>
+
+              {/* Show number below (optional small text) */}
+              <p className="mt-4 text-gray-600 text-sm">+92 309 5204849</p>
             </div>
 
             {/* Floating elements for visual interest */}
@@ -938,185 +977,161 @@ const HomePage = () => {
 
         {/* Distribution Partners Section */}
         <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
-                Sell your book{" "}
-                <span className="italic text-amber-600 relative">
-                  everywhere
-                  <div className="absolute bottom-0 left-0 w-full h-1 bg-amber-400 rounded"></div>
-                </span>
-              </h2>
-              <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-                The largest worldwide print and eBook distribution network is at your fingertips
-              </p>
-            </div>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+        Platforms <span className="italic text-amber-600 relative">
+          we work with
+          <div className="absolute bottom-0 left-0 w-full h-1 bg-amber-400 rounded"></div>
+        </span>
+      </h2>
+      <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        We format and distribute your book for leading publishing platforms and global retailers.
+      </p>
+    </div>
 
-            {/* Partner Logos */}
-            <div className="flex flex-wrap justify-center items-center gap-12 mb-12">
-              {/* Barnes & Noble */}
-              <a
-                href="https://www.barnesandnoble.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group transition-all duration-300 hover:scale-110"
-              >
-                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
-                  BARNES & NOBLE
-                </div>
-                <div className="text-sm text-slate-500 text-center mt-1">BOOKSELLERS</div>
-              </a>
+    {/* Partner Logos */}
+    <div className="flex flex-wrap justify-center items-center gap-12 mb-12">
 
-              {/* Amazon Books */}
-              <a
-                href="https://www.amazon.com/books-used-books-textbooks/b?ie=UTF8&node=283155"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group transition-all duration-300 hover:scale-110"
-              >
-                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
-                  Amazon
-                </div>
-                <div className="w-16 h-0.5 bg-amber-500 mx-auto mt-1"></div>
-              </a>
+      {/* Amazon KDP */}
+      <a
+        href="https://kdp.amazon.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900">
+          Amazon KDP
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Self-publishing platform</div>
+      </a>
 
-              {/* Walmart Books */}
-              <a
-                href="https://www.walmart.com/cp/books/3920"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group transition-all duration-300 hover:scale-110"
-              >
-                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
-                  Walmart
-                  <div className="ml-2 text-amber-500">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                    </svg>
-                  </div>
-                </div>
-              </a>
+      {/* Apple Books */}
+      <a
+        href="https://www.apple.com/apple-books/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900">
+          Apple Books
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">For iPhone & iPad readers</div>
+      </a>
 
-              {/* Target Books */}
-              <a
-                href="https://www.target.com/c/books/-/N-5xsxr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group transition-all duration-300 hover:scale-110"
-              >
-                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
-                  Target
-                  <div className="ml-2 w-6 h-6 rounded-full border-2 border-red-500 flex items-center justify-center">
-                    <div className="w-2 h-2 rounded-full bg-red-500"></div>
-                  </div>
-                </div>
-              </a>
+      {/* Draft2Digital */}
+      <a
+        href="https://www.draft2digital.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-3xl font-bold text-slate-600 group-hover:text-slate-900">
+          Draft2Digital
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Wide ebook distribution</div>
+      </a>
 
-              {/* eBay Books */}
-              <a
-                href="https://www.ebay.com/b/Books/267/bn_1854946"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group transition-all duration-300 hover:scale-110"
-              >
-                <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors">
-                  eBay
-                </div>
-                <div className="flex gap-1 justify-center mt-1">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                </div>
-              </a>
+      {/* Smashwords */}
+      <a
+        href="https://www.smashwords.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-3xl font-bold text-slate-600 group-hover:text-slate-900">
+          Smashwords
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Independent ebook publishing</div>
+      </a>
 
-              {/* Etsy Books */}
-              <a
-                href="https://www.etsy.com/c/books-movies-and-music/books"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group transition-all duration-300 hover:scale-110"
-              >
-                <div className="text-3xl font-bold text-slate-600 group-hover:text-slate-900 transition-colors flex items-center">
-                  <div className="w-8 h-8 bg-purple-600 rounded-full mr-2 flex items-center justify-center text-white text-sm font-bold">
-                    E
-                  </div>
-                  Etsy
-                </div>
-              </a>
-            </div>
+      {/* Barnes & Noble */}
+      <a
+        href="https://www.barnesandnoble.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900">
+          BARNES & NOBLE
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Booksellers</div>
+      </a>
 
+      {/* Walmart */}
+      <a
+        href="https://www.walmart.com/cp/books/3920"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 flex items-center">
+          Walmart
+          <div className="ml-2 text-amber-500">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+            </svg>
           </div>
-        </section>
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Retailer</div>
+      </a>
 
-        {/* Portfolio Section - Optimized with CSS */}
-        {/* <section id="portfolio" className="pt-24 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800">
-          <div className="max-w-7xl mx-auto">
-            <div className="relative bg-gradient-to-br from-gray-900 to-black rounded-3xl shadow-2xl overflow-hidden border border-orange-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 to-orange-900/20"></div>
-              <div className="relative z-10">
-                <div className="text-center py-8 px-8">
-                  <h3 className="text-3xl font-bold text-white mb-3">Our Book Design Portfolio</h3>
-                  <p className="text-orange-200 mb-8">Continuously showcasing hundreds of professional book covers</p>
-
-                  <div className="relative overflow-hidden w-[800px] md:w-[1000px] lg:w-[1200px]">
-                    <div
-                      className="flex space-x-6 animate-infinite-scroll"
-                      style={{ width: `${bookCollection.length * 2 * 350}px` }}
-                    >
-                      {[...bookCollection, ...bookCollection].map((book, index) => (
-                        <div key={index} className="flex-shrink-0 group cursor-pointer">
-                          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 transform hover:scale-105 bg-gray-800 border border-orange-400/30">
-                            <div className="w-40 h-60 relative">
-                              <img
-                                src={book.image || "/placeholder.svg"}
-                                alt={book.title}
-                                loading="lazy"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-orange-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                              <div className="absolute bottom-2 left-2 right-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                                <p className="text-white text-sm font-bold truncate">{book.title}</p>
-                                <p className="text-orange-300 text-xs">{book.category}</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="relative overflow-hidden mt-7 w-[800px] md:w-[1000px] lg:w-[1200px]">
-                    <div
-                      className="flex space-x-6 animate-infinite-scroll"
-                      style={{ width: `${bookCollection2.length * 3 * 350}px` }}
-                    >
-                      {[...bookCollection2, ...bookCollection2].map((book, index) => (
-                        <div key={index} className="flex-shrink-0 group cursor-pointer">
-                          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 transform hover:scale-105 bg-gray-800 border border-orange-400/30">
-                            <div className="w-40 h-60 relative">
-                              <img
-                                src={book.image || "/placeholder.svg"}
-                                alt={book.title}
-                                loading="lazy"
-                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-orange-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                              <div className="absolute bottom-2 left-2 right-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                                <p className="text-white text-sm font-bold truncate">{book.title}</p>
-                                <p className="text-orange-300 text-xs">{book.category}</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Target */}
+      <a
+        href="https://www.target.com/c/books/-/N-5xsxr"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900 flex items-center">
+          Target
+          <div className="ml-2 w-6 h-6 rounded-full border-2 border-red-500 flex items-center justify-center">
+            <div className="w-2 h-2 rounded-full bg-red-500"></div>
           </div>
-        </section> */}
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Retailer</div>
+      </a>
+
+      {/* eBay */}
+      <a
+        href="https://www.ebay.com/b/Books/267/bn_1854946"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-4xl font-bold text-slate-600 group-hover:text-slate-900">
+          eBay
+        </div>
+        <div className="flex gap-1 justify-center mt-1">
+          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+          <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Marketplace</div>
+      </a>
+
+      {/* Etsy */}
+      <a
+        href="https://www.etsy.com/c/books-movies-and-music/books"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group transition-all duration-300 hover:scale-110"
+      >
+        <div className="text-3xl font-bold text-slate-600 group-hover:text-slate-900 flex items-center">
+          <div className="w-8 h-8 bg-purple-600 rounded-full mr-2 flex items-center justify-center text-white text-sm font-bold">
+            E
+          </div>
+          Etsy
+        </div>
+        <div className="text-sm text-slate-500 text-center mt-1">Indie marketplace</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+       
         <section
           id="portfolio"
           className="pt-24 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800"
@@ -1128,11 +1143,14 @@ const HomePage = () => {
 
                 {/* Left Side - Intro & Services */}
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-4">About Me</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    Hi, I’m <span className="text-orange-400 font-semibold">Abdul Rehman</span>, a professional book designer & publishing expert.
-                    With years of experience helping authors bring their stories to life, I specialize in creating beautiful, market-ready books.
-                  </p>
+                  <h3 className="text-3xl font-bold text-white mb-4">About Us</h3>
+                 <p className="text-gray-300 mb-6 leading-relaxed">
+  I’m <span className="font-semibold">Abdul Rehman</span>, CEO of <span className="text-orange-400 font-semibold">BookStudio</span>.  
+  We’ve proudly partnered with <span className="text-orange-400">thousands of authors worldwide</span> to transform their manuscripts into stunning, market-ready books.  
+  Our mission is simple: to combine <span className="font-semibold">creativity, professionalism, and industry expertise</span> to help every author share their story with the world.
+</p>
+
+
 
                   <h4 className="text-xl font-semibold text-orange-300 mb-4">Services I Offer</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-300">
@@ -1158,6 +1176,13 @@ const HomePage = () => {
                       <span className="text-orange-400">✔</span> Lead Magnet PDF Design
                     </li>
                   </ul>
+
+                <p className="mt-4 text-sm text-gray-600 border-l-4 border-blue-500 pl-3">
+  More services available on request
+</p>
+
+
+
                 </div>
 
                 {/* Right Side - Owner Image */}
@@ -1216,11 +1241,11 @@ const HomePage = () => {
         </section>
 
         {/* Trustpilot Reviews Section */}
-        <section className="py-20 px-4 bg-slate-50 mb-[-120px]">
+        {/* <section className="py-20 px-4 bg-slate-50 mb-[-120px]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               {/* Trustpilot Logo and Rating */}
-              <div className="flex items-center justify-center space-x-3 mb-6">
+              {/* <div className="flex items-center justify-center space-x-3 mb-6">
                 <div className="flex items-center space-x-2">
                   <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                     <Star className="w-5 h-5 text-white fill-current" />
@@ -1229,7 +1254,6 @@ const HomePage = () => {
                 </div>
               </div>
 
-              {/* Star Rating */}
               <div className="flex justify-center space-x-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <div key={star} className="w-12 h-12 bg-green-500 rounded flex items-center justify-center">
@@ -1243,7 +1267,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */} 
 
 
 
