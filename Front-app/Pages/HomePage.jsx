@@ -745,110 +745,118 @@ const HomePage = () => {
 
         {/* Get In Touch Section */}
         <section
-          ref={getInTouchSectionRef}
-          className="h-[750px] flex items-center justify-center py-16 px-4"
-          style={{
-            background: "linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 50%, #f0e6db 100%)",
-          }}
+  ref={getInTouchSectionRef}
+  className="relative min-h-screen flex items-center justify-center py-12 px-4 sm:py-16"
+  style={{
+    background: "linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 50%, #f0e6db 100%)",
+  }}
+>
+  <div className="max-w-4xl mx-auto text-center">
+    {/* Header */}
+    <div className="mb-12 sm:mb-16">
+      <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6 sm:mb-8 tracking-tight">
+        Get in touch
+      </h2>
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        At <span className="font-semibold text-orange-600">BookCraft Studio</span>, we guide you
+        through every stage of the publishing journey. Our dedicated team ensures that every detail
+        of your book is handled with care and expertise, giving you complete peace of mind. When
+        your manuscript is ready, our experienced Publishing Specialists are here to provide
+        personalized support and guidance.
+      </p>
+    </div>
+
+    {/* Image Gallery */}
+    <section className="px-2 sm:px-4 mb-10">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+          {getInTouch.map((image, index) => (
+            <div
+              key={index}
+              className="aspect-square overflow-hidden shadow-md transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay={`${index * 200}`}
+            >
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="w-full h-full object-cover transition-transform duration-500"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* CTA Section */}
+    <div className="mt-8 sm:mt-10">
+      <div className="flex items-center justify-center gap-2 sm:gap-4">
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-12 sm:w-16"></div>
+        <span className="text-gray-600 font-medium text-sm sm:text-base">Get in Touch</span>
+        <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-12 sm:w-16"></div>
+      </div>
+
+      {/* Buttons Row */}
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-6">
+        {/* Call Button */}
+        <a
+          href="tel:+923095204849"
+          className="inline-flex items-center px-5 sm:px-6 py-3 text-base sm:text-lg font-semibold text-white bg-orange-600 rounded-full shadow-md hover:bg-orange-700 transition-colors duration-300 w-full sm:w-auto justify-center"
         >
-          <div className="max-w-4xl mx-auto text-center">
-            {/* Header */}
-            <div className="mb-16">
-              <h2 className="text-5xl md:text-6xl font-bold text-gray-800 mb-8 tracking-tight">Get in touch</h2>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                At <span className="font-semibold text-orange-600">BookCraft Studio</span>, we guide you through every stage of the publishing journey.
-                Our dedicated team ensures that every detail of your book is handled with care and expertise, giving you complete peace of mind.
-                When your manuscript is ready, our experienced Publishing Specialists are here to provide personalized support and guidance.
-              </p>
+          <svg
+            className="w-5 h-5 sm:w-6 sm:h-6 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+            />
+          </svg>
+          Call Us
+        </a>
 
-            </div>
+        {/* WhatsApp Button */}
+        <a
+          href="https://wa.me/923095204849"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-5 sm:px-6 py-3 text-base sm:text-lg font-semibold text-white bg-green-600 rounded-full shadow-md hover:bg-green-700 transition-colors duration-300 w-full sm:w-auto justify-center"
+        >
+          <svg
+            className="w-5 h-5 sm:w-6 sm:h-6 mr-2"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M20 3.5A10.5 10.5 0 0012 1a10.5 10.5 0 00-9.33 15.5L2 23l6.67-1.67A10.5 10.5 0 1012 1zM12 20.5a8.5 8.5 0 01-4.42-1.21l-.31-.18-3.95 1L4.3 16.6l-.2-.32A8.5 8.5 0 1112 20.5zm4.79-6.63c-.26-.13-1.54-.76-1.78-.84-.24-.09-.42-.13-.59.13-.18.26-.67.84-.82 1.01-.15.18-.3.2-.56.07-.26-.13-1.11-.41-2.11-1.31-.78-.69-1.31-1.54-1.46-1.8-.15-.26-.02-.4.11-.53.11-.11.26-.3.38-.45.13-.15.17-.26.26-.44.09-.18.04-.33-.02-.46-.07-.13-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.46.07-.7.33s-.92.9-.92 2.2.95 2.54 1.08 2.71c.13.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.23.22-.6.22-1.11.15-1.23-.07-.11-.24-.18-.5-.31z" />
+          </svg>
+          WhatsApp
+        </a>
+      </div>
 
-            {/* Image Gallery */}
-            <section className=" px-4 mb-10">
-              <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {getInTouch.map((image, index) => (
-                    <div
-                      key={index}
-                      className="aspect-square overflow-hidden shadow-md transition-all duration-300"
-                      data-aos="zoom-in"
-                      data-aos-delay={`${index * 200}`}
-                    >
-                      <img src={image.src} alt={image.alt} className="w-full h-full object-cover transition-transform duration-500" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </section>
+      {/* Show number below (optional small text) */}
+      <p className="mt-4 text-gray-600 text-sm">+92 309 5204849</p>
+    </div>
 
-            {/* CTA Section */}
-            <div className="mt-10">
-              <div className="flex items-center justify-center gap-4">
-                <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
-                <span className="text-gray-600 font-medium">Get in Touch</span>
-                <div className="h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent w-16"></div>
-              </div>
+    {/* Floating elements (hidden on mobile) */}
+    <div
+      className="hidden sm:block absolute top-20 left-10 w-20 h-20 bg-orange-200 rounded-full opacity-20 animate-bounce"
+      style={{ animationDelay: "0s", animationDuration: "3s" }}
+    ></div>
+    <div
+      className="hidden sm:block absolute bottom-20 right-10 w-16 h-16 bg-orange-300 rounded-full opacity-20 animate-bounce"
+      style={{ animationDelay: "1s", animationDuration: "4s" }}
+    ></div>
+    <div
+      className="hidden sm:block absolute top-1/2 left-5 w-12 h-12 bg-orange-400 rounded-full opacity-15 animate-bounce"
+      style={{ animationDelay: "2s", animationDuration: "5s" }}
+    ></div>
+  </div>
+</section>
 
-              {/* Buttons Row */}
-              <div className="flex items-center justify-center gap-6 mt-6">
-                {/* Call Button */}
-                <a
-                  href="tel:+923095204849"
-                  className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-orange-600 rounded-full shadow-md hover:bg-orange-700 transition-colors duration-300"
-                >
-                  <svg
-                    className="w-6 h-6 mr-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                  Call Us
-                </a>
-
-                {/* WhatsApp Button */}
-                <a
-                  href="https://wa.me/923095204849"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white bg-green-600 rounded-full shadow-md hover:bg-green-700 transition-colors duration-300"
-                >
-                  <svg
-                    className="w-6 h-6 mr-2"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M20 3.5A10.5 10.5 0 0012 1a10.5 10.5 0 00-9.33 15.5L2 23l6.67-1.67A10.5 10.5 0 1012 1zM12 20.5a8.5 8.5 0 01-4.42-1.21l-.31-.18-3.95 1L4.3 16.6l-.2-.32A8.5 8.5 0 1112 20.5zm4.79-6.63c-.26-.13-1.54-.76-1.78-.84-.24-.09-.42-.13-.59.13-.18.26-.67.84-.82 1.01-.15.18-.3.2-.56.07-.26-.13-1.11-.41-2.11-1.31-.78-.69-1.31-1.54-1.46-1.8-.15-.26-.02-.4.11-.53.11-.11.26-.3.38-.45.13-.15.17-.26.26-.44.09-.18.04-.33-.02-.46-.07-.13-.59-1.43-.81-1.96-.21-.51-.42-.44-.59-.45h-.5c-.18 0-.46.07-.7.33s-.92.9-.92 2.2.95 2.54 1.08 2.71c.13.18 1.87 2.85 4.53 3.99.63.27 1.12.43 1.5.55.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.23.22-.6.22-1.11.15-1.23-.07-.11-.24-.18-.5-.31z"/>
-                  </svg>
-                  WhatsApp
-                </a>
-              </div>
-
-              {/* Show number below (optional small text) */}
-              <p className="mt-4 text-gray-600 text-sm">+92 309 5204849</p>
-            </div>
-
-            {/* Floating elements for visual interest */}
-            <div
-              className="absolute top-20 left-10 w-20 h-20 bg-orange-200 rounded-full opacity-20 animate-bounce"
-              style={{ animationDelay: "0s", animationDuration: "3s" }}
-            ></div>
-            <div
-              className="absolute bottom-20 right-10 w-16 h-16 bg-orange-300 rounded-full opacity-20 animate-bounce"
-              style={{ animationDelay: "1s", animationDuration: "4s" }}
-            ></div>
-            <div
-              className="absolute top-1/2 left-5 w-12 h-12 bg-orange-400 rounded-full opacity-15 animate-bounce"
-              style={{ animationDelay: "2s", animationDuration: "5s" }}
-            ></div>
-          </div>
-        </section>
 
         {/* Circular Services Section */}
         <section id="services" className="py-20 px-4 bg-white">
