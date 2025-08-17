@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"
 import { useNavigate } from 'react-router-dom';
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+// import { ZoomIn, ZoomOut, X, Download } from "lucide-react";
 
 // Import images from bookDesign folder
 import bookDesign1 from "/bookDesign/mockup (5).jpg";
@@ -28,6 +29,46 @@ import bookDesign15 from "/bookDesign/mockup__ (2).jpg";
 
 const BookDesignPage = () => {
   const [_activeTab, _setActiveTab] = useState('covers');
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [zoom, setZoom] = useState(1);
+
+  const handlePreview = (img) => {
+    setSelectedImage(img);
+    setZoom(1); // reset zoom when opening
+  };
+
+  const handleClose = () => {
+    setSelectedImage(null);
+    setZoom(1);
+  };
+
+  const handleDownload = (img) => {
+    const link = document.createElement("a");
+    link.href = img;
+    link.download = "book-design.jpg";
+    link.click();
+  };
+
+  const items = [
+    {
+      img: bookDesign14,
+      title: "Professional Cover Design",
+      description: "Clean typography, compelling imagery, genre-appropriate design",
+      label: "After",
+    },
+    {
+      img: bookDesign4,
+      title: "Beautiful Interior Layout",
+      description: "Perfect typography, spacing, and formatting for readability",
+      label: "Interior",
+    },
+    {
+      img: bookDesign3,
+      title: "Complete Design Package",
+      description: "Cover, interior, and marketing materials all designed cohesively",
+      label: "Complete",
+    },
+  ];
 
   useEffect(() => {
       window.scrollTo(0, 0);
@@ -104,70 +145,89 @@ const BookDesignPage = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="grid grid-cols-3 gap-4">
-                {bookDesigns.covers.slice(0, 6).map((book, index) => (
-                  <div key={index} className="relative" data-aos="zoom-in">
-                    <div className="relative overflow-hidden rounded-lg shadow-lg">
-                      <img src={book.image} alt={book.title} className="w-full h-48 object-cover" />
-                    </div>
-                    {book.beforeAfter && (
-                      <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
-                        New Design
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none" data-aos="fade-in">
-                <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  10,000+ Books Designed
-                </div>
-              </div>
-            </div>
+  <div className="relative overflow-hidden rounded-lg shadow-lg" data-aos="zoom-in">
+    <img
+      src={bookDesigns.covers[0].image}   // Just use the first image
+      alt={bookDesigns.covers[0].title}
+      className="w-full h-96 object-cover" // Increased height for a larger image
+    />
+    {bookDesigns.covers[0].beforeAfter && (
+      <div className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded-full">
+        New Design
+      </div>
+    )}
+  </div>
+
+  {/* Overlay Text */}
+  <div
+    className="absolute inset-0 flex items-center justify-center pointer-events-none"
+    data-aos="fade-in"
+  >
+    <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+      10,000+ Books Designed
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
 
       {/* Book Design Services */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Book Design Services</h2>
-            <p className="text-lg text-gray-600">From cover to interior, we design every aspect of your book</p>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-12" data-aos="fade-up">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Complete Book Design Services</h2>
+      <p className="text-lg text-gray-600">From cover to interior, we design every aspect of your book</p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {designServices.map((service, index) => (
+        <div
+          key={index}
+          data-aos="fade-up"
+          className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+        >
+          {/* Large image (like step 1) */}
+          <div className="h-48 overflow-hidden">
+            <img
+              src={service.designExample}
+              alt={service.title}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {designServices.map((service, index) => (
-              <div key={index} className="bg-white border border-orange-100 rounded-xl p-8 hover:shadow-xl transition-all duration-300" data-aos="fade-up">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="text-orange-500">{service.icon}</div>
-                  <img src={service.designExample} alt="Design example" className="w-12 h-16 object-cover rounded shadow-md" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
-                      <Check className="w-4 h-4 text-orange-500" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex items-center justify-between">
-                  {/* <span className="text-orange-600 font-bold text-lg">{service.price}</span> */}
-                  <a
-                    href="https://wa.me/923001234567" // Replace with your WhatsApp number
-                    target="_blank"
-                  >
-                  <button className="bg-orange-50 text-orange-600 px-4 py-2 rounded-lg font-medium hover:bg-orange-100 transition-colors">
-                    Get Started
-                  </button>
-                  </a>
-                </div>
-              </div>
-            ))}
+
+          {/* Card content */}
+          <div className="p-8">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
+            <p className="text-gray-600 mb-6 leading-relaxed text-center">{service.description}</p>
+
+            <ul className="space-y-2 mb-6">
+              {service.features.map((feature, idx) => (
+                <li key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
+                  <Check className="w-4 h-4 text-orange-500" />
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="text-center">
+              <a
+                href="https://wa.me/923001234567" // Replace with your WhatsApp number
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-orange-50 text-orange-600 px-6 py-2 rounded-lg font-medium hover:bg-orange-100 transition-colors">
+                  Get Started
+                </button>
+              </a>
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Design Portfolio Tabs */}
 
@@ -200,97 +260,155 @@ const BookDesignPage = () => {
 
       {/* Design Process with Visuals */}
       <section className="py-16 px-6 bg-orange-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Book Design Process</h2>
-            <p className="text-lg text-gray-600">From concept to completion - how we create stunning book designs</p>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-12" data-aos="fade-up">
+      <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Book Design Process</h2>
+      <p className="text-lg text-gray-600">
+        From concept to completion — a seamless journey to your perfect book design
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-5 gap-10">
+      {designProcess.map((step, index) => (
+        <div
+          key={index}
+          className="text-center flex flex-col items-center"
+          data-aos="fade-up"
+        >
+          {/* Step number */}
+          <div className="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold shadow-lg mb-6">
+            {step.step}
           </div>
-          <div className="grid md:grid-cols-5 gap-8">
-            {designProcess.map((step, index) => (
-              <div key={index} className="text-center" data-aos="fade-up">
-                <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto shadow-lg mb-4">
-                    {step.step}
-                  </div>
-                  <img src={step.designVisual} alt={step.title} className="w-12 h-12 object-cover rounded-full mx-auto border-4 border-white shadow-md" />
-                  {index < designProcess.length - 1 && (
-                    <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-orange-300"></div>
-                  )}
-                </div>
-                <div className="text-orange-500 mb-3 flex justify-center">{step.icon}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 text-sm">{step.description}</p>
-              </div>
-            ))}
+
+          {/* Step image */}
+          <div className="w-full h-32 overflow-hidden rounded-xl shadow-md mb-4">
+            <img
+              src={step.designVisual}
+              alt={step.title}
+              className="w-full h-full object-cover"
+            />
           </div>
+
+          {/* Step title + description */}
+          <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Before/After Showcase */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12" data-aos="fade-up">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Design Transformations</h2>
-            <p className="text-lg text-gray-600">See how professional design transforms book covers</p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { img: bookDesign14, title: "Professional Cover Design", description: "Clean typography, compelling imagery, genre-appropriate design", label: "After" },
-              { img: bookDesign4, title: "Beautiful Interior Layout", description: "Perfect typography, spacing, and formatting for readability", label: "Interior" },
-              { img: bookDesign3, title: "Complete Design Package", description: "Cover, interior, and marketing materials all designed cohesively", label: "Complete" }
-            ].map((item, index) => (
-              <div key={index} className="text-center" data-aos="fade-up">
-                <div className="relative mb-4">
-                  <img src={item.img} alt={item.title} className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto" />
-                  <div className="absolute -bottom-2 -right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                    {item.label}
-                  </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12" data-aos="fade-up">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Book Design Transformations
+          </h2>
+          <p className="text-lg text-gray-600">
+            See how professional design transforms book covers
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              img: bookDesign14,
+              title: "Professional Cover Design",
+              description:
+                "Clean typography, compelling imagery, genre-appropriate design",
+              label: "After",
+            },
+            {
+              img: bookDesign4,
+              title: "Beautiful Interior Layout",
+              description:
+                "Perfect typography, spacing, and formatting for readability",
+              label: "Interior",
+            },
+            {
+              img: bookDesign3,
+              title: "Complete Design Package",
+              description:
+                "Cover, interior, and marketing materials all designed cohesively",
+              label: "Complete",
+            },
+          ].map((item, index) => (
+            <div key={index} className="text-center" data-aos="fade-up">
+              <div className="relative mb-4">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto"
+                />
+                <div className="absolute -bottom-2 -right-2 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  {item.label}
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.description}</p>
               </div>
-            ))}
+              <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
+              <p className="text-gray-600 text-sm">{item.description}</p>
+              <div className="flex justify-center gap-4 mt-3">
+                <button
+                  onClick={() => handlePreview(item.img)}
+                  className="flex items-center gap-1 px-3 py-1 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition"
+                >
+                  <Eye size={16} /> Preview
+                </button>
+                <button
+                  onClick={() => handleDownload(item.img)}
+                  className="flex items-center gap-1 px-3 py-1 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition"
+                >
+                  <Download size={16} /> Download
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Preview Modal */}
+      {selectedImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+          <div className="relative max-w-4xl max-h-[90vh] flex flex-col items-center">
+            {/* Close Button */}
+            <button
+              onClick={handleClose}
+              className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded-full hover:bg-red-700"
+            >
+              <X size={20} />
+            </button>
+
+            {/* Zoom Controls */}
+            <div className="flex gap-4 mb-4">
+              <button
+                onClick={() => setZoom((z) => z + 0.2)}
+                className="bg-white px-3 py-2 rounded shadow hover:bg-gray-200"
+              >
+                <ZoomIn size={20} />
+              </button>
+              <button
+                onClick={() => setZoom((z) => Math.max(0.5, z - 0.2))}
+                className="bg-white px-3 py-2 rounded shadow hover:bg-gray-200"
+              >
+                <ZoomOut size={20} />
+              </button>
+            </div>
+
+            {/* Image */}
+            <div className="overflow-auto max-h-[75vh]">
+              <img
+                src={selectedImage}
+                alt="Preview"
+                style={{ transform: `scale(${zoom})`, transition: "transform 0.2s" }}
+                className="max-w-full max-h-[75vh] object-contain rounded-lg"
+              />
+            </div>
           </div>
         </div>
-      </section>
+      )}
+    </section>
 
       {/* CTA Section with Book Mockups */}
-      <section className="py-16 px-6 bg-orange-500 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="grid grid-cols-6 gap-4 transform rotate-12 scale-150">
-            {Array.from({ length: 24 }).map((_, i) => (
-              <div key={i} className="w-16 h-20 bg-white rounded shadow-md"></div>
-            ))}
-          </div>
-        </div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-5xl font-bold text-white mb-6" data-aos="fade-up">Ready to Design Your Book?</h2>
-          <p className="text-xl text-orange-100 mb-8" data-aos="fade-up" data-aos-delay="200">
-            Join over 10,000 authors who chose BookCraft for professional book design services that get results.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" data-aos="fade-up" data-aos-delay="400">
-            <a
-                    href="https://wa.me/923001234567" // Replace with your WhatsApp number
-                    target="_blank"
-                  >
-            <button className="bg-white text-orange-500 px-8 py-4 rounded-lg font-bold hover:bg-orange-50 transition-colors flex items-center justify-center space-x-2">
-              <Brush className="w-5 h-5" />
-              <span>Start My Book Design</span>
-            </button>
-            </a>
-          </div>
-          <div className="flex items-center justify-center space-x-8 text-orange-100" data-aos="fade-up" data-aos-delay="600">
-            <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5" />
-              <span>100% Satisfaction Guarantee</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="w-5 h-5" />
-              <span>5-7 Day Delivery</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Floating WhatsApp Button */}
          <div className="fixed bottom-6 right-6 z-50 animate-bounce">
